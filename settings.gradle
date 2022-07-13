@@ -14,3 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "WorkOutMemo"
 include ':app'
+include ':core'
+include ':data'
+include ':domain'
+include ':presentation'
