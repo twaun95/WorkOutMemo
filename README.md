@@ -1,8 +1,9 @@
 # WorkOutMemo
 
+- 운동 메모 기능
 
-todo
-- buildSrc
-- di
-- figma 디자인
-- base 모듈
+
+기능
+- room
+- koin
+- modules
