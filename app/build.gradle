@@ -37,6 +37,7 @@ dependencies {
     implementation project(path: ':domain')
     implementation project(path: ':presentation')
 
+    implementation(jetpackDependency)
     implementation(koinDependency)
     testImplementation(testDependency)
     androidTestImplementation(androidTestDeps)
