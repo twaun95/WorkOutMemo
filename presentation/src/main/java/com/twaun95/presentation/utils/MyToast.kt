@@ -15,7 +15,7 @@ object MyToast {
         val binding: ViewToastBinding =
             DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.view_toast, null, false)
 
-        binding.tvSample.text = message
+        binding.toastText.text = message
 
         Toast(context).apply {
             setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 16.toPx())

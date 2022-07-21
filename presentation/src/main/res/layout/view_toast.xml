@@ -27,7 +27,7 @@
                 android:paddingEnd="16dp">
 
                 <TextView
-                    android:id="@+id/tvSample"
+                    android:id="@+id/toast_text"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_marginEnd="10dp"
@@ -51,7 +51,7 @@
                     android:background="@color/cardview_dark_background"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/tvSample"
+                    app:layout_constraintStart_toEndOf="@id/toast_text"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
