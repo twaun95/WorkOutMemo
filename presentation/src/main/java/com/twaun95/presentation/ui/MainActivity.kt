@@ -13,7 +13,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainActivityViewModel>(R.
     override fun onStart() {
         super.onStart()
         MyLogger.d(viewModel.code)
-        MyToast.createToast(this, "OnStart").show()
+        MyToast.createToast(this, "토스트 실험").show()
     }
 
 }

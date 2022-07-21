@@ -10,4 +10,10 @@
     <color name="mono7">#707478</color>
     <color name="mono8">#202020</color>
 
+
+    <!-- toast    -->
+    <color name="toast_inner">#6E7A8F</color>
+    <color name="toast_border">#5E6F8C</color>
+    <color name="toast_text">#FFFFFF</color>
+
 </resources>
