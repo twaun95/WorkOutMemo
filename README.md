@@ -6,7 +6,7 @@
 
 ### 👊🏻 도전!!
 - 기본 보일러플레이트 만들며 프로젝트 진행 
-  - base class(activity, fragment, viewModel, dialog)
+  - base class(activity, fragment, viewModel, dialog, toast)
 - MVVM + 클린 아키텍쳐 구조
   - ViewModel, Repository 사용
   - module 단위 구성(app, core, data, domain, presentation)
