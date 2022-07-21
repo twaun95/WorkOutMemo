@@ -10,18 +10,18 @@ import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.ViewToastBinding
 
 object MyToast {
-    fun createToast(context: Context, message: String): Toast {
-        val inflater = LayoutInflater.from(context)
+
+    fun show(context: Context, message: String, toastDuration : Int = Toast.LENGTH_SHORT) {
         val binding: ViewToastBinding =
-            DataBindingUtil.inflate(inflater, R.layout.view_toast, null, false)
+            DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.view_toast, null, false)
 
         binding.tvSample.text = message
 
-        return Toast(context).apply {
+        Toast(context).apply {
             setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 16.toPx())
-            duration = Toast.LENGTH_SHORT
+            duration = toastDuration
             view = binding.root
-        }
+        }.show()
     }
 
     private fun Int.toPx(): Int = (this * Resources.getSystem().displayMetrics.density).toInt()

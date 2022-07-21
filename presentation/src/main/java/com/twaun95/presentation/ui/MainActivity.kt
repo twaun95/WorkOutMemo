@@ -1,5 +1,6 @@
 package com.twaun95.presentation.ui
 
+import android.widget.Toast
 import com.twaun95.core.BaseActivity
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.ActivityMainBinding
@@ -13,7 +14,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainActivityViewModel>(R.
     override fun onStart() {
         super.onStart()
         MyLogger.d(viewModel.code)
-        MyToast.createToast(this, "토스트 실험").show()
+        MyToast.show(this, "토스트 실험", Toast.LENGTH_LONG)
     }
 
 }

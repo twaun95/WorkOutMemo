@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/toast_border"
         app:cardCornerRadius="50dp"
-        app:cardElevation="1dp">
+        app:cardElevation="0dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -22,19 +22,21 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="36dp"
                 android:paddingStart="20dp"
-                android:paddingEnd="20dp">
+                android:paddingEnd="16dp">
 
                 <TextView
                     android:id="@+id/tvSample"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginEnd="10dp"
-                    android:fontFamily="@font/regular"
-                    android:text="Hello World!"
+                    android:gravity="center"
+                    android:autoSizeTextType="uniform"
+                    app:layout_constraintHeight_percent="0.7"
+                    android:fontFamily="@font/light"
+                    android:text="Toast Message"
                     android:textColor="@color/toast_text"
-                    android:textSize="15dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/ivSample"
                     app:layout_constraintStart_toStartOf="parent"
