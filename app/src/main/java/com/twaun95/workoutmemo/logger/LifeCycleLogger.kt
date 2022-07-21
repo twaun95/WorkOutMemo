@@ -4,7 +4,7 @@ import android.util.Log
 
 object LifeCycleLogger {
     fun debug(owner: Any, message: String) {
-        Log.d("taewaun",
+        Log.d("TAEWAUN",
             String.format(
                 "[LifeCycle][%s][%s]-%s",
                 owner::class.java.simpleName,

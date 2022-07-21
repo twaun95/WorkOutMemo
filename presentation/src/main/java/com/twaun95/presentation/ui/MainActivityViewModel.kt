@@ -1,4 +1,8 @@
 package com.twaun95.presentation.ui
 
-class MainActivityViewModel {
+import com.twaun95.core.BaseViewModel
+
+class MainActivityViewModel : BaseViewModel() {
+
+    val code = "MAIN"
 }

@@ -5,10 +5,12 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import org.koin.android.ext.android.inject
 
-abstract class BaseActivity<T: ViewDataBinding>(@LayoutRes private val layoutId: Int) : AppCompatActivity() {
+abstract class BaseActivity<BINDING: ViewDataBinding, VM: BaseViewModel>(@LayoutRes private val layoutId: Int) : AppCompatActivity() {
 
-    protected lateinit var binding : T
+    protected lateinit var binding : BINDING
+    abstract val viewModel: VM
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,12 +1,17 @@
 package com.twaun95.presentation.ui
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.twaun95.core.BaseActivity
 import com.twaun95.presentation.R
+import com.twaun95.presentation.databinding.ActivityMainBinding
+import com.twaun95.presentation.utils.MyLogger
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseActivity<ActivityMainBinding, MainActivityViewModel>(R.layout.activity_main) {
+    override val viewModel : MainActivityViewModel by viewModel()
+
+    override fun onStart() {
+        super.onStart()
+        MyLogger.d(viewModel.code)
     }
+
 }
