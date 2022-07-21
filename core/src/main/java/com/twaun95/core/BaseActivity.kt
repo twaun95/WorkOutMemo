@@ -7,9 +7,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import org.koin.android.ext.android.inject
 
-abstract class BaseActivity<BINDING: ViewDataBinding, VM: BaseViewModel>(@LayoutRes private val layoutId: Int) : AppCompatActivity() {
+abstract class BaseActivity<VB: ViewDataBinding, VM: BaseViewModel>(@LayoutRes private val layoutId: Int) : AppCompatActivity() {
 
-    protected lateinit var binding : BINDING
+    protected lateinit var binding : VB
     abstract val viewModel: VM
 
     override fun onCreate(savedInstanceState: Bundle?) {
