@@ -16,10 +16,18 @@ abstract class BaseActivity<VB: ViewDataBinding, VM: BaseViewModel>(@LayoutRes p
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, layoutId)
         binding.lifecycleOwner = this
+
+        initView()
+        setEvent()
+        setObserver()
     }
 
     override fun onDestroy() {
         binding.unbind()
         super.onDestroy()
     }
+
+    open fun initView() {}
+    open fun setEvent() {}
+    open fun setObserver() {}
 }
