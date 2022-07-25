@@ -17,7 +17,7 @@
     - presentation  : UI
 - 구글 스토어 배포 
 - 새 기술 시도
-  - recyclerview diff class
+  - recyclerview diffutil class
   - binding adapter
   - room
   - fragment navigation
