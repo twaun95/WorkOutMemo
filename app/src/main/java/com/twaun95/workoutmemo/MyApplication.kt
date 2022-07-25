@@ -3,6 +3,7 @@ package com.twaun95.workoutmemo
 import android.app.Application
 import com.twaun95.workoutmemo.logger.ActivityLifeCycleLogger
 import com.twaun95.workoutmemo.modules.LogModule
+import com.twaun95.workoutmemo.modules.RepositoryModule
 import com.twaun95.workoutmemo.modules.ViewModelModule
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
@@ -20,7 +21,8 @@ class MyApplication : Application(){
             androidContext(this@MyApplication)
             modules(
                 LogModule.module,
-                ViewModelModule.module
+                ViewModelModule.module,
+                RepositoryModule.module
             )
         }
         registerActivityLifecycleCallbacks(activityLifeCycleLogger)
