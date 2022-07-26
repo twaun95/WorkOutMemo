@@ -1,4 +1,4 @@
-package com.twaun95.presentation.ui.body_part
+package com.twaun95.presentation.ui.body_part.diff_basic
 
 import androidx.recyclerview.widget.DiffUtil
 import com.twaun95.data.BodyPart
