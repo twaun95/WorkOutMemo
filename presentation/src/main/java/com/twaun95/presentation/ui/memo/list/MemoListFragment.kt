@@ -17,6 +17,9 @@ class MemoListFragment : BaseFragment<FragmentMemoListBinding, MemoListFragmentV
         binding.btnBack.setOnClickListener {
             parentFragmentManager.beginTransaction().remove(this).commit()
         }
+        binding.btnCreate.setOnClickListener {
+            // 메모추가 fragment
+        }
     }
 
     override fun setObserver() {

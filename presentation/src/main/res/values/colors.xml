@@ -3,6 +3,7 @@
 
     <color name="primary">#6E7A8F</color>
     <color name="transparent">#00000000</color>
+    <color name="dialog_background">#8C000000</color>
     
     <color name="mono1">#FFFFFF</color>
     <color name="mono2">#F1F4F8</color>

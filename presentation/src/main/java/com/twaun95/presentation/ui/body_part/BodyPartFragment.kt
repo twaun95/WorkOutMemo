@@ -10,6 +10,7 @@ import com.twaun95.presentation.databinding.FragmentBodyPartBinding
 import com.twaun95.presentation.ui.body_part.diff_async.BodyPartAsyncAdapter
 import com.twaun95.presentation.ui.body_part.diff_basic.BodyPartAdapter
 import com.twaun95.presentation.ui.body_part.diff_listadapter.BodyPartListAdapter
+import com.twaun95.presentation.ui.dialog.CreateBodyPartDialog
 import com.twaun95.presentation.ui.memo.list.MemoListFragment
 import com.twaun95.presentation.utils.MyLogger
 import org.koin.android.ext.android.inject
@@ -41,8 +42,9 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
     override fun setEvent() {
         super.setEvent()
         binding.buttonAdd.setOnClickListener {
-            testRepository.addList()
-            bodyPartAdapter.replace(testRepository.getList())
+            CreateBodyPartDialog().show(childFragmentManager, null)
+//            testRepository.addList()
+//            bodyPartAdapter.replace(testRepository.getList())
         }
     }
 
