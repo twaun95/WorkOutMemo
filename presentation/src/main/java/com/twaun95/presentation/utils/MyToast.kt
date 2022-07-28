@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.ViewToastBinding
+import com.twaun95.presentation.extensions.toPx
 
 object MyToast {
 
@@ -24,5 +25,4 @@ object MyToast {
         }.show()
     }
 
-    private fun Int.toPx(): Int = (this * Resources.getSystem().displayMetrics.density).toInt()
 }

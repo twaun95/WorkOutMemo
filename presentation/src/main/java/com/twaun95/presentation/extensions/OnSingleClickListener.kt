@@ -1,4 +1,4 @@
-package com.twaun95.presentation.utils
+package com.twaun95.presentation.extensions
 
 import android.os.SystemClock
 import android.view.View
