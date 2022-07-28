@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.FragmentDialogCreateBodyPartBinding
+import com.twaun95.presentation.utils.MyLogger
+import com.twaun95.presentation.utils.setOnSingleClickListener
 
 class CreateBodyPartDialog : DialogFragment(){
 
@@ -31,6 +33,22 @@ class CreateBodyPartDialog : DialogFragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnCancel.setOnSingleClickListener {
+            dismiss()
+        }
+        binding.btnComplete.setOnSingleClickListener {
+            dismiss()
+        }
+        binding.button.setOnSingleClickListener {
+            MyLogger.d("Clicked!!!!")
+        }
+    }
+
+    companion object {
+        fun show() {
+
+        }
     }
 
     // 화면 거의 꽉차는 dialog

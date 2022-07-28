@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <import type="com.twaun95.presentation.utils.DrawableConverter"/>
     </data>
 
     <FrameLayout
@@ -19,8 +19,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:clipToOutline="true"
                 android:background="@drawable/dialog_round"
+                android:clipToOutline="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintDimensionRatio="H, 5:4"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,19 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/gl_top" />
+                    app:layout_constraintTop_toBottomOf="@id/gl_top">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.628" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/gl_bottom"
@@ -70,33 +82,43 @@
                     android:id="@+id/layout_bottom"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/mono4"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/gl_bottom">
 
-                    <Button
-                        android:id="@+id/button2"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_cancel"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginRight="1dp"
+                        android:background="@color/mono4"
+                        android:fontFamily="@font/medium"
                         android:text="취소"
+                        android:textColor="@color/mono7"
+                        android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/button"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_complete"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
 
-                    <Button
-                        android:id="@+id/button"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_complete"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
+                        android:layout_marginLeft="1dp"
+                        android:background="@color/mono4"
+                        android:fontFamily="@font/medium"
                         android:text="완료"
+                        android:textColor="@color/mono7"
+                        android:textSize="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/button2"
+                        app:layout_constraintStart_toEndOf="@+id/btn_cancel"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>

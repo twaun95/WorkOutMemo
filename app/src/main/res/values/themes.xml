@@ -7,7 +7,7 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <!-- Color used for text and icons displayed on top of the secondary color. -->
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/primary</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/primary</item>
     </style>
