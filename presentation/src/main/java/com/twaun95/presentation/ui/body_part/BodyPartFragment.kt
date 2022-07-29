@@ -7,13 +7,12 @@ import com.twaun95.data.BodyPart
 import com.twaun95.data.TestRepository
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.FragmentBodyPartBinding
+import com.twaun95.presentation.extensions.setOnSingleClickListener
 import com.twaun95.presentation.ui.body_part.diff_async.BodyPartAsyncAdapter
 import com.twaun95.presentation.ui.body_part.diff_basic.BodyPartAdapter
 import com.twaun95.presentation.ui.body_part.diff_listadapter.BodyPartListAdapter
 import com.twaun95.presentation.ui.dialog.CreateBodyPartDialog
 import com.twaun95.presentation.ui.memo.list.MemoListFragment
-import com.twaun95.presentation.utils.MyLogger
-import com.twaun95.presentation.utils.setOnSingleClickListener
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

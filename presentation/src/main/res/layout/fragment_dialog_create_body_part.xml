@@ -40,6 +40,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintHeight_percent="0.7"
+                        android:gravity="center"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="부위 추가"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.Guideline
@@ -59,16 +73,38 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/gl_top">
 
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Button"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/gl_top_etv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.3" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/gl_bottom_etv"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.6" />
+
+                    <EditText
+                        android:id="@+id/etv_body_part"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@color/mono2"
+                        android:textColorHint="@color/mono5"
+                        android:textColor="@color/mono7"
+                        android:hint="추가할 운동 부위를 입력해주세요."
+                        android:textSize="17dp"
+                        android:fontFamily="@font/medium"
+                        android:paddingLeft="10dp"
+                        android:inputType="textPersonName"
+                        app:layout_constraintBottom_toTopOf="@id/gl_bottom_etv"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.628" />
+                        app:layout_constraintTop_toBottomOf="@id/gl_top_etv"
+                        app:layout_constraintWidth_percent="0.8" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.Guideline
