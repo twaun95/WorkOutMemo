@@ -13,6 +13,9 @@ import com.twaun95.presentation.ui.body_part.diff_basic.BodyPartAdapter
 import com.twaun95.presentation.ui.body_part.diff_listadapter.BodyPartListAdapter
 import com.twaun95.presentation.ui.dialog.CreateBodyPartDialog
 import com.twaun95.presentation.ui.memo.list.MemoListFragment
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -28,20 +31,26 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
     override fun onStart() {
         super.onStart()
         bodyPartAdapter.replace(testRepository.getList())
+//        CoroutineScope(Dispatchers.IO).launch(Dispatchers.Main){
+//        }
     }
 
     override fun initView() {
         super.initView()
         binding.rvBodyPart.adapter = bodyPartAdapter.apply {
             moveOnClickedListener = {
-                parentFragmentManager.beginTransaction().add(R.id.frame_layout_main, MemoListFragment()).addToBackStack(null).commit()
+                parentFragmentManager.beginTransaction()
+                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left,R.anim.exit_to_right)
+                    .add(R.id.frame_layout_main, MemoListFragment())
+                    .addToBackStack(null)
+                    .commit()
             }
         }
     }
 
     override fun setEvent() {
         super.setEvent()
-        binding.buttonAdd.setOnSingleClickListener {
+        binding.btnCreate.setOnSingleClickListener {
             CreateBodyPartDialog().show(childFragmentManager, null)
 //            testRepository.addList()
 //            bodyPartAdapter.replace(testRepository.getList())

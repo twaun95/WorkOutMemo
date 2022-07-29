@@ -16,7 +16,10 @@ class MemoListFragment : BaseFragment<FragmentMemoListBinding, MemoListFragmentV
     override fun setEvent() {
         super.setEvent()
         binding.btnBack.setOnSingleClickListener {
-            parentFragmentManager.beginTransaction().remove(this).commit()
+            parentFragmentManager.beginTransaction()
+                .setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right,R.anim.exit_to_left)
+                .remove(this)
+                .commit()
         }
         binding.btnCreate.setOnSingleClickListener {
             // 메모추가 fragment
