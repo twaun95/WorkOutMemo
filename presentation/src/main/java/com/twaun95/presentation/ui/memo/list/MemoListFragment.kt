@@ -3,6 +3,7 @@ package com.twaun95.presentation.ui.memo.list
 import com.twaun95.core.BaseFragment
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.FragmentMemoListBinding
+import com.twaun95.presentation.extensions.setOnSingleClickListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MemoListFragment : BaseFragment<FragmentMemoListBinding, MemoListFragmentViewModel>(R.layout.fragment_memo_list) {
@@ -14,10 +15,10 @@ class MemoListFragment : BaseFragment<FragmentMemoListBinding, MemoListFragmentV
 
     override fun setEvent() {
         super.setEvent()
-        binding.btnBack.setOnClickListener {
+        binding.btnBack.setOnSingleClickListener {
             parentFragmentManager.beginTransaction().remove(this).commit()
         }
-        binding.btnCreate.setOnClickListener {
+        binding.btnCreate.setOnSingleClickListener {
             // 메모추가 fragment
         }
     }
