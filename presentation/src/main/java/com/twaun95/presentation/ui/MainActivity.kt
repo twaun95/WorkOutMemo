@@ -1,5 +1,6 @@
 package com.twaun95.presentation.ui
 
+import android.widget.Toast
 import com.twaun95.core.BaseActivity
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.ActivityMainBinding
@@ -19,6 +20,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainActivityViewModel>(R.
     override fun setEvent() {
         super.setEvent()
 
+//        applicationContext // applicationContext
+//        Toast.makeText(this, "d",Toast.LENGTH_LONG).show() // activity context
+//        baseContext // ?? what context
     }
 
     override fun setObserver() {
