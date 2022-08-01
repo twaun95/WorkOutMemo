@@ -1,21 +1,13 @@
 package com.twaun95.presentation.ui.body_part
 
-import android.os.Bundle
-import android.view.View
 import com.twaun95.core.BaseFragment
-import com.twaun95.data.BodyPart
 import com.twaun95.data.TestRepository
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.FragmentBodyPartBinding
 import com.twaun95.presentation.extensions.setOnSingleClickListener
-import com.twaun95.presentation.ui.body_part.diff_async.BodyPartAsyncAdapter
 import com.twaun95.presentation.ui.body_part.diff_basic.BodyPartAdapter
-import com.twaun95.presentation.ui.body_part.diff_listadapter.BodyPartListAdapter
-import com.twaun95.presentation.ui.dialog.CreateBodyPartDialog
+import com.twaun95.presentation.dialog.CreateBodyPartDialog
 import com.twaun95.presentation.ui.memo.list.MemoListFragment
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

@@ -8,6 +8,7 @@ ext {
             "junit"             :   "4.13.2",
             "junitest"          :   "1.1.3",
             "espressoCore"      :   "3.4.0",
+            "lottie"            :   "4.2.2"
     ]
 
     dependenciesSet = [
@@ -26,7 +27,9 @@ ext {
                     "junit"             :   "junit:junit:${versions.junit}",
                     "junitext"          :   "androidx.test.ext:junit:${versions.junitest}",
                     "espressoCore"      :   "androidx.test.espresso:espresso-core:${versions.espressoCore}"
-            ]
+            ],
+            "lottie"                       : "com.airbnb.android:lottie:${versions.lottie}",
+
     ]
 
     jetpackDependency = [

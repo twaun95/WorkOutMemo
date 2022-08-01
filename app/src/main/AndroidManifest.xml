@@ -15,7 +15,16 @@
         android:theme="@style/Theme.WorkOutMemo"
         tools:targetApi="31">
         <activity
-            android:name="com.twaun95.presentation.ui.MainActivity"
+            android:name="com.twaun95.presentation.ui.main.MainActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name="com.twaun95.presentation.ui.splash.LaunchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

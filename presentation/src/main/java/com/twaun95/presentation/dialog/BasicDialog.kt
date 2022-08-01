@@ -1,4 +1,4 @@
-package com.twaun95.presentation.ui.dialog
+package com.twaun95.presentation.dialog
 
 class BasicDialog {
 

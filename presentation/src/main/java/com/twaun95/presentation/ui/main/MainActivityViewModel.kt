@@ -1,4 +1,4 @@
-package com.twaun95.presentation.ui
+package com.twaun95.presentation.ui.main
 
 import com.twaun95.core.BaseViewModel
 
