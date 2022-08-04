@@ -10,7 +10,7 @@ import org.koin.dsl.module
 object ViewModelModule : KoinModule{
     override val module: Module
         get() = module {
-            single { LaunchActivityViewModel() }
+            single { LaunchActivityViewModel(get()) }
             single { MainActivityViewModel() }
             single { BodyPartFragmentViewModel() }
             single { MemoListFragmentViewModel() }

@@ -18,10 +18,14 @@ class LaunchActivity : BaseActivity<ActivityLaunchBinding, LaunchActivityViewMod
         binding.viewLottie.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(p0: Animator?) {
                 MyLogger.d("lottie onAnimationStart")
+
+                MyLogger.d(viewModel.getLoginId())
+                viewModel.putLoginId("TEST")
             }
 
             override fun onAnimationEnd(p0: Animator?) {
-                startActivity(Intent(this@LaunchActivity, MainActivity::class.java))
+                val intent = Intent(this@LaunchActivity, MainActivity::class.java)
+                startActivity(intent)
             }
 
             override fun onAnimationCancel(p0: Animator?) {
