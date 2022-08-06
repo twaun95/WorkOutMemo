@@ -21,4 +21,6 @@
     <color name="toast_border">#5E6F8C</color>
     <color name="toast_text">#FFFFFF</color>
 
+    <color name="test_background">#9AC89C</color>
+
 </resources>
