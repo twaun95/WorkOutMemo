@@ -23,4 +23,7 @@
 
     <color name="test_background">#9AC89C</color>
 
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
@@ -10,43 +11,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_left"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.1" />
+            android:background="@color/mono4"
+            app:layout_constraintBottom_toTopOf="@+id/rg_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="10" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_right"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.85" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_top"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_bottom"
+        <RadioGroup
+            android:id="@+id/rg_navigation"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.6" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager"
+            app:layout_constraintVertical_weight="1" >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@color/primary"
-            app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
-            app:layout_constraintLeft_toRightOf="@id/guideline_left"
-            app:layout_constraintRight_toLeftOf="@id/guideline_right"
-            app:layout_constraintTop_toBottomOf="@id/guideline_top">
+            <RadioButton
+                android:id="@+id/rb_a"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:text="A"
+                android:gravity="center"
+                android:textColor="@color/mono8"
+                android:fontFamily="@font/semi_bold"
+                android:layout_height="match_parent"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <RadioButton
+                android:id="@+id/rb_b"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="B"
+                android:gravity="center"
+                android:textColor="@color/mono8"
+                android:fontFamily="@font/semi_bold"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:layout_height="match_parent"/>
+
+        </RadioGroup>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
