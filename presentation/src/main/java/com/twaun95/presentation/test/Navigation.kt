@@ -6,5 +6,5 @@ import androidx.fragment.app.Fragment
 data class Navigation(
     val name: String,
     val newInstance: (()-> Fragment),
-    val radioButtonId: RadioButton
+    val radioButtonId: Int
 )

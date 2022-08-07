@@ -15,30 +15,22 @@ class TestActivity : BaseActivity<ActivityTestBinding, TestActivityViewModel>(R.
 
     private fun initViewPager() {
         val naviList = mutableListOf<Navigation>()
-        naviList.add(Navigation("A", { AFragment.newInstance() }, binding.rbA))
-        naviList.add(Navigation("B", { BFragment.newInstance() }, binding.rbB))
-
+        naviList.add(Navigation("A", { AFragment.newInstance() }, R.id.rb_a))
+        naviList.add(Navigation("B", { BFragment.newInstance() }, R.id.rb_b))
 
         binding.viewPager.apply {
             adapter = TestViewPageAdapter(this@TestActivity).apply {
-                for (i in naviList) {
-                    addFragment(i.newInstance())
-                }
+                naviList.forEach{ addFragment(it.newInstance()) }
             }
         }
 
-        binding.rgNavigation.setOnCheckedChangeListener { group, id ->
-
-//            group.indexOfChild(naviList)
-//            val index = naviList.find { it.radioButtonId == id }
-            val index = when(id) {
-                R.id.rb_a -> 0
-                R.id.rb_b -> 1
-                else -> 0
+        binding.rgNavigation.apply {
+            check(naviList.first().radioButtonId)
+            setOnCheckedChangeListener { _, id ->
+                val index = naviList.indices.find { naviList[it].radioButtonId == id } ?: 0
+                binding.viewPager.setCurrentItem(index, true)
             }
-            binding.viewPager.setCurrentItem(index, false)
         }
-
     }
 
 }
