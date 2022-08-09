@@ -44,4 +44,6 @@ dependencies {
     implementation(koinDependency)
     testImplementation(testDependency)
     androidTestImplementation(androidTestDeps)
+
+    debugImplementation dependenciesSet.leakcanary
 }
