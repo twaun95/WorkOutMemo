@@ -1,18 +1,16 @@
 package com.twaun95.presentation.dialog
 
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
 import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.FragmentDialogCreateBodyPartBinding
 import com.twaun95.presentation.extensions.setOnSingleClickListener
-import com.twaun95.presentation.utils.MyLogger
 
-class CreateBodyPartDialog : DialogFragment(){
+class CreateBodyPartDialog(private var dialogClickListener : ((clicked: DialogClicked)->Unit)? = null) : DialogFragment(){
 
     private lateinit var binding: FragmentDialogCreateBodyPartBinding
 
@@ -35,20 +33,18 @@ class CreateBodyPartDialog : DialogFragment(){
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnCancel.setOnSingleClickListener {
+            dialogClickListener?.invoke(DialogClicked.NO)
             dismiss()
         }
         binding.btnComplete.setOnSingleClickListener {
+            dialogClickListener?.invoke(DialogClicked.YES)
             dismiss()
         }
     }
 
     companion object {
-        fun show() {
-
+        fun show(fragmentManager: FragmentManager, clickListener: ((clicked: DialogClicked)->Unit)? = null) {
+            return CreateBodyPartDialog(clickListener).show(fragmentManager, null)
         }
     }
-
-    // 화면 거의 꽉차는 dialog
-    // editText
-    // 취소 / 추가
 }

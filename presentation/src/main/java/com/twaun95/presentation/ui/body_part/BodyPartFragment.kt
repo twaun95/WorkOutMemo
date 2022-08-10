@@ -7,7 +7,9 @@ import com.twaun95.presentation.databinding.FragmentBodyPartBinding
 import com.twaun95.presentation.extensions.setOnSingleClickListener
 import com.twaun95.presentation.ui.body_part.diff_basic.BodyPartAdapter
 import com.twaun95.presentation.dialog.CreateBodyPartDialog
+import com.twaun95.presentation.dialog.DialogClicked
 import com.twaun95.presentation.ui.memo.list.MemoListFragment
+import com.twaun95.presentation.utils.MyLogger
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -22,9 +24,7 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
 
     override fun onStart() {
         super.onStart()
-        bodyPartAdapter.replace(testRepository.getList())
-//        CoroutineScope(Dispatchers.IO).launch(Dispatchers.Main){
-//        }
+        bodyPartAdapter.update(testRepository.getList())
     }
 
     override fun initView() {
@@ -43,13 +43,17 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
     override fun setEvent() {
         super.setEvent()
         binding.btnCreate.setOnSingleClickListener {
-            CreateBodyPartDialog().show(childFragmentManager, null)
-//            testRepository.addList()
-//            bodyPartAdapter.replace(testRepository.getList())
+            CreateBodyPartDialog.show(childFragmentManager) {
+                when (it) {
+                    DialogClicked.NO -> {
+                        MyLogger.d("No")
+                    }
+                    DialogClicked.YES -> {
+                        MyLogger.d("Yes")
+                    }
+                }
+            }
         }
     }
 
-    override fun setObserver() {
-        super.setObserver()
-    }
 }

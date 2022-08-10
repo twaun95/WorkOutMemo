@@ -12,29 +12,29 @@ class BodyPartAdapter(
     var moveOnClickedListener: (()->Unit)? = null
 ) : RecyclerView.Adapter<BodyPartViewHolder>() {
 
-    private val bodyPartList = mutableListOf<BodyPart>()
+    private val itemList = mutableListOf<BodyPart>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BodyPartViewHolder {
         return BodyPartViewHolder(ItemBodyPartBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun onBindViewHolder(holder: BodyPartViewHolder, position: Int) {
-        holder.bind(bodyPartList[position]) {
+        holder.bind(itemList[position]) {
             moveOnClickedListener?.invoke()
         }
     }
 
     override fun getItemCount(): Int {
-        return bodyPartList.size
+        return itemList.size
     }
 
 
-    fun replace(newBodyPartList: List<BodyPart>) {
-        val diffCallback  = BodyPartDiffUtilCallback(bodyPartList, newBodyPartList)
+    fun update(newItemList: List<BodyPart>) {
+        val diffCallback  = BodyPartDiffUtilCallback(itemList, newItemList)
         val diffResult = DiffUtil.calculateDiff(diffCallback)
 
-        bodyPartList.clear()
-        bodyPartList.addAll(newBodyPartList)
+        itemList.clear()
+        itemList.addAll(newItemList)
 
         diffResult.dispatchUpdatesTo(this)
     }
