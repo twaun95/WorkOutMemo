@@ -17,7 +17,7 @@ class MemoListFragment : BaseFragment<FragmentMemoListBinding, MemoListFragmentV
         super.setEvent()
         binding.btnBack.setOnSingleClickListener {
             parentFragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right,R.anim.exit_to_left)
+                .setCustomAnimations(R.anim.slide_enter_from_left, R.anim.slide_exit_to_right)
                 .remove(this)
                 .commit()
         }

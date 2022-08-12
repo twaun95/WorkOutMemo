@@ -33,7 +33,7 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
         binding.rvBodyPart.adapter = bodyPartAdapter.apply {
             moveOnClickedListener = {
                 parentFragmentManager.beginTransaction()
-                    .setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left,R.anim.exit_to_right)
+                    .setCustomAnimations(R.anim.slide_enter_from_right, R.anim.slide_exit_to_left, R.anim.slide_enter_from_left,R.anim.slide_exit_to_right)
                     .add(R.id.frame_layout_main, MemoListFragment())
                     .addToBackStack(null)
                     .commit()

@@ -26,6 +26,7 @@ class LaunchActivity : BaseActivity<ActivityLaunchBinding, LaunchActivityViewMod
             override fun onAnimationEnd(p0: Animator?) {
                 val intent = Intent(this@LaunchActivity, MainActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_enter_from_right, R.anim.slide_exit_to_left)
             }
 
             override fun onAnimationCancel(p0: Animator?) {
