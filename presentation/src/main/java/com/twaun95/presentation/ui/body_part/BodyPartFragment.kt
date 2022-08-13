@@ -34,7 +34,7 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
             moveOnClickedListener = {
                 parentFragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.slide_enter_from_right, R.anim.slide_exit_to_left, R.anim.slide_enter_from_left,R.anim.slide_exit_to_right)
-                    .add(R.id.frame_layout_main, MemoListFragment())
+                    .add(R.id.frame_layout_main, MemoListFragment.newInstance())
                     .addToBackStack(null)
                     .commit()
             }
@@ -66,6 +66,10 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
 //                }
 //            }
         }
+    }
+
+    companion object {
+        fun newInstance() = BodyPartFragment()
     }
 
 }
