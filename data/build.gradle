@@ -33,6 +33,9 @@ dependencies {
 
     implementation(jetpackDependency)
     implementation(koinDependency)
+    implementation dependenciesSet.room.room
+    annotationProcessor dependenciesSet.room.annotation
+
     testImplementation(testDependency)
     androidTestImplementation(androidTestDeps)
 }
