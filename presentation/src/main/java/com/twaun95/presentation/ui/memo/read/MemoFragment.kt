@@ -14,6 +14,8 @@ class MemoFragment : BaseFragment<FragmentMemoBinding, MemoFragmentViewModel>(R.
 
     override fun initView() {
         super.initView()
+
+        binding.viewModel = fragmentViewModel
     }
 
     override fun setEvent() {
