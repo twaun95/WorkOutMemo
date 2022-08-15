@@ -26,4 +26,8 @@
 
     </style>
 
+    <style name="my_button" parent="Widget.AppCompat.Button">
+
+    </style>
+
 </resources>
