@@ -7,17 +7,18 @@ import com.twaun95.presentation.ui.memo.list.MemoListFragmentViewModel
 import com.twaun95.presentation.ui.memo.read.MemoFragment
 import com.twaun95.presentation.ui.memo.read.MemoFragmentViewModel
 import com.twaun95.presentation.ui.splash.LaunchActivityViewModel
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
 object ViewModelModule : KoinModule{
     override val module: Module
         get() = module {
-            single { LaunchActivityViewModel(get()) }
-            single { MainActivityViewModel() }
-            single { BodyPartFragmentViewModel() }
-            single { MemoListFragmentViewModel() }
-            single { MemoCreateFragmentViewModel() }
-            single { MemoFragmentViewModel() }
+            viewModel { LaunchActivityViewModel(get()) }
+            viewModel { MainActivityViewModel() }
+            viewModel { BodyPartFragmentViewModel() }
+            viewModel { MemoListFragmentViewModel() }
+            viewModel { MemoCreateFragmentViewModel() }
+            viewModel { MemoFragmentViewModel() }
         }
 }
