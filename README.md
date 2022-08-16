@@ -28,6 +28,9 @@
   
 
 ### 📝 기술
-- room
+- 클린아키텍쳐, MVVM
+- coroutine
 - koin
-- modules
+- room
+
+
