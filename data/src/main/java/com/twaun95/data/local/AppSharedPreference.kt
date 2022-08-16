@@ -3,7 +3,7 @@ package com.twaun95.data.local
 import android.content.Context
 import androidx.core.content.edit
 
-class MySharedPreference(context: Context) {
+class AppSharedPreference(context: Context) {
 
     private val preference = context.getSharedPreferences(FILE_KEY, Context.MODE_PRIVATE)
 
