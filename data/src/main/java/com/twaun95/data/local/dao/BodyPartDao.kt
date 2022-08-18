@@ -12,7 +12,7 @@ interface BodyPartDao{
     fun createBodyPart(entity: BodyPartEntity)
 
     @Query("SELECT * FROM body_part_table")
-    fun readBodyPart() : List<BodyPartEntity>
+    suspend fun readBodyPart() : List<BodyPartEntity>
 
     @Delete
     fun deleteBodyPart(entity: BodyPartEntity)

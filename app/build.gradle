@@ -41,6 +41,8 @@ dependencies {
     implementation project(path: ':domain')
     implementation project(path: ':presentation')
 
+    implementation dependenciesSet.room.room
+    annotationProcessor dependenciesSet.room.annotation
 
     implementation(jetpackDependency)
     implementation(koinDependency)

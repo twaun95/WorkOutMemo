@@ -6,6 +6,8 @@ import com.twaun95.presentation.R
 import com.twaun95.presentation.databinding.FragmentBodyPartBinding
 import com.twaun95.presentation.dialog.base.BaseDialog
 import com.twaun95.presentation.dialog.CommonDialog
+import com.twaun95.presentation.dialog.CreateBodyPartDialog
+import com.twaun95.presentation.dialog.DialogClicked
 import com.twaun95.presentation.dialog.base.DialogBody
 import com.twaun95.presentation.extensions.setOnSingleClickListener
 import com.twaun95.presentation.ui.body_part.diff_basic.BodyPartAdapter
@@ -44,27 +46,29 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
     override fun setEvent() {
         super.setEvent()
         binding.btnCreate.setOnSingleClickListener {
-            CommonDialog(
-                BaseDialog.ButtonType.TWO,
-                DialogBody("제목", "내용"),
-                {
-                    MyLogger.d("No")
-                }, {
-                    MyLogger.d("Yes")
-                }
-            ).show(childFragmentManager, null)
 
-
-//            CreateBodyPartDialog.show(childFragmentManager) {
-//                when (it) {
-//                    DialogClicked.NO -> {
-//                        MyLogger.d("No")
-//                    }
-//                    DialogClicked.YES -> {
-//                        MyLogger.d("Yes")
-//                    }
+//            fragmentViewModel.getList()
+//            CommonDialog(
+//                BaseDialog.ButtonType.TWO,
+//                DialogBody("제목", "내용"),
+//                {
+//                    MyLogger.d("No")
+//                }, {
+//                    MyLogger.d("Yes")
 //                }
-//            }
+//            ).show(childFragmentManager, null)
+
+
+            CreateBodyPartDialog.show(childFragmentManager) { clicked, text ->
+                when (clicked) {
+                    DialogClicked.NO -> {
+                        MyLogger.d("No")
+                    }
+                    DialogClicked.YES -> {
+                        MyLogger.d(text)
+                    }
+                }
+            }
         }
     }
 
