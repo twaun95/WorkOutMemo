@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.twaun95.presentation.ui.body_part.BodyPartFragmentViewModel" />
     </data>
 
     <FrameLayout
@@ -95,6 +97,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            layout="@layout/view_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:isLoading="@{viewModel.isLoading}"
+            tools:visibility="gone" />
 
     </FrameLayout>
 </layout>
