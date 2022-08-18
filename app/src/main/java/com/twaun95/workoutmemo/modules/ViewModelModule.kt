@@ -16,7 +16,7 @@ object ViewModelModule : KoinModule{
         get() = module {
             viewModel { LaunchActivityViewModel(get()) }
             viewModel { MainActivityViewModel() }
-            viewModel { BodyPartFragmentViewModel(get()) }
+            viewModel { BodyPartFragmentViewModel() }
             viewModel { MemoListFragmentViewModel() }
             viewModel { MemoCreateFragmentViewModel() }
             viewModel { MemoFragmentViewModel() }

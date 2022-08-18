@@ -6,23 +6,26 @@ import androidx.lifecycle.viewModelScope
 import com.twaun95.core.BaseViewModel
 import com.twaun95.data.repository.BodyPartRepositoryImpl
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class BodyPartFragmentViewModel(
-    private val repositoryImpl: BodyPartRepositoryImpl
-) : BaseViewModel() {
+class BodyPartFragmentViewModel() : BaseViewModel() {
 
-    val testCode = 1
-
-    val addEvent = MutableLiveData<Boolean>(false)
+    val fail by lazy { MutableLiveData<Boolean>(false) }
 
     init {
-
     }
 
-    fun getList() {
-        viewModelScope.launch(Dispatchers.IO) {
-            repositoryImpl.getBodyPart()
+    fun createBodyPart() {
+
+        viewModelScope.launch(this.viewModelScope.coroutineContext + Dispatchers.IO) {
+            isLoading.postValue(true)
+
+            delay(2000L)
+
+            fail.postValue(true)
+            isLoading.postValue(false)
         }
     }
+
 }

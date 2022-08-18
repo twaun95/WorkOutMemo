@@ -17,20 +17,20 @@ object DataModule : KoinModule {
 
             single { TestRepository() }
             single { AppSharedPreference(androidApplication()) }
-            single { BodyPartRepositoryImpl(get()) }
-
-
-            single {
-                Room.databaseBuilder(
-                    get(),
-                    AppDatabase::class.java,
-                    "app_database"
-                )
-                    .fallbackToDestructiveMigration()
-                    .allowMainThreadQueries()
-                    .build()
-            }
-
-            single { get<AppDatabase>().bodyPartDao() }
+//            single { BodyPartRepositoryImpl(get()) }
+//
+//
+//            single {
+//                Room.databaseBuilder(
+//                    get(),
+//                    AppDatabase::class.java,
+//                    "app_database"
+//                )
+//                    .fallbackToDestructiveMigration()
+//                    .allowMainThreadQueries()
+//                    .build()
+//            }
+//
+//            single { get<AppDatabase>().bodyPartDao() }
         }
 }

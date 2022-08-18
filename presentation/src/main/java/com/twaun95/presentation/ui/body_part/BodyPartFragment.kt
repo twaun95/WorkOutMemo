@@ -32,6 +32,9 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
 
     override fun initView() {
         super.initView()
+
+        binding.viewModel = fragmentViewModel
+
         binding.rvBodyPart.adapter = bodyPartAdapter.apply {
             moveOnClickedListener = {
                 parentFragmentManager.beginTransaction()
@@ -65,10 +68,28 @@ class BodyPartFragment: BaseFragment<FragmentBodyPartBinding, BodyPartFragmentVi
                         MyLogger.d("No")
                     }
                     DialogClicked.YES -> {
-                        MyLogger.d(text)
+                        fragmentViewModel.createBodyPart()
                     }
                 }
             }
+        }
+    }
+
+    override fun setObserver() {
+        super.setObserver()
+
+        fragmentViewModel.fail.observe(viewLifecycleOwner) {
+            if (!it) return@observe
+
+            CommonDialog(
+                BaseDialog.ButtonType.TWO,
+                DialogBody("추가 완료", "추가가 완료되었습니다."),
+                {
+                    MyLogger.d("No")
+                }, {
+                    MyLogger.d("Yes")
+                }
+            ).show(childFragmentManager, null)
         }
     }
 
