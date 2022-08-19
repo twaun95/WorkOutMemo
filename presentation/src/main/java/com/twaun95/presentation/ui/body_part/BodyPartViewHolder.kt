@@ -12,8 +12,8 @@ class BodyPartViewHolder(
         data: BodyPart,
         onClickListener: (()->Unit)? = null
     ) {
-        binding.textView.text = data.title
-        binding.buttonMove.setOnSingleClickListener {
+        binding.tvTitle.text = data.title
+        binding.layoutItemBodypart.setOnSingleClickListener {
             onClickListener?.invoke()
         }
     }

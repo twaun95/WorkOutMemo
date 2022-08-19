@@ -18,13 +18,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_root"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/mono3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_header"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@drawable/bottom_line"
                 app:layout_constraintBottom_toTopOf="@id/gl_header"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -39,7 +39,7 @@
                     android:fontFamily="@font/semi_bold"
                     android:gravity="center"
                     android:singleLine="true"
-                    android:text="부위 선택"
+                    android:text="운동 부위"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHeight_percent="0.7"
@@ -74,6 +74,7 @@
                 android:id="@+id/layout_rv"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_margin="6dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -84,7 +85,7 @@
                     android:id="@+id/rv_body_part"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="@color/mono6"
+                    android:background="@drawable/frame_list_memo"
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     android:overScrollMode="never"

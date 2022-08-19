@@ -10,8 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_item_memo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/frame_item_memo">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
@@ -39,6 +38,7 @@
                     android:fontFamily="@font/bold"
                     android:singleLine="true"
                     android:text="제목"
+                    app:layout_constraintHeight_percent="0.8"
                     android:textColor="@color/mono8"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

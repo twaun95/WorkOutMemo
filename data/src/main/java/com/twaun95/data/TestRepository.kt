@@ -3,7 +3,7 @@ package com.twaun95.data
 class TestRepository {
 
     private val bodyPartList = mutableListOf<BodyPart>(
-        BodyPart(-2, "가슴"),
+        BodyPart(-2, "어깨"),
         BodyPart(-1, "등")
     )
     private var id = 0
