@@ -15,13 +15,14 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_root"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/mono1">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_header"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/mono1"
+                android:background="@drawable/bottom_line"
                 app:layout_constraintBottom_toTopOf="@id/gl_header"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -79,7 +80,6 @@
                 android:id="@+id/layout_rv"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/mono7"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -90,7 +90,9 @@
                     android:id="@+id/rv_memo"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:background="#3B988A"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@color/mono1"
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"
                     android:overScrollMode="never"

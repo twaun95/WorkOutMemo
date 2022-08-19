@@ -51,7 +51,7 @@ class MemoAdapter(
             onClickListener: (()->Unit)? = null
         ) {
             binding.tvTitle.text = data.title
-            binding.btnMove.setOnSingleClickListener {
+            binding.layoutItemMemo.setOnSingleClickListener {
                 onClickListener?.invoke()
             }
         }

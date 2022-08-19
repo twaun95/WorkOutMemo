@@ -14,6 +14,7 @@ class BodyPartFragmentViewModel() : BaseViewModel() {
     val fail by lazy { MutableLiveData<Boolean>(false) }
 
     init {
+
     }
 
     fun createBodyPart() {
