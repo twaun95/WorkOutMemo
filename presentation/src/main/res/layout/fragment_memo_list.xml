@@ -90,6 +90,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_margin="6dp"
+                    android:paddingTop="5dp"
                     android:background="@drawable/frame_list_memo"
                     android:nestedScrollingEnabled="false"
                     android:orientation="vertical"

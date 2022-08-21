@@ -3,6 +3,7 @@ package com.twaun95.presentation.ui.memo.list
 import com.twaun95.core.BaseFragment
 import com.twaun95.data.TestRepository
 import com.twaun95.presentation.R
+import com.twaun95.presentation.adapter.BodyPartItemDecoration
 import com.twaun95.presentation.databinding.FragmentMemoListBinding
 import com.twaun95.presentation.extensions.setOnSingleClickListener
 import com.twaun95.presentation.ui.memo.create.MemoCreateFragment
@@ -25,13 +26,16 @@ class MemoListFragment : BaseFragment<FragmentMemoListBinding, MemoListFragmentV
     override fun initView() {
         super.initView()
 
-        binding.rvMemo.adapter = memoAdapter.apply {
-            moveOnClickedListener = {
-                parentFragmentManager.beginTransaction()
-                    .setCustomAnimations(R.anim.slide_enter_from_right, R.anim.slide_exit_to_left, R.anim.slide_enter_from_left,R.anim.slide_exit_to_right)
-                    .add(R.id.frame_layout_memo_list, MemoFragment.newInstance())
-                    .addToBackStack(null)
-                    .commit()
+        binding.rvMemo.apply {
+            addItemDecoration(BodyPartItemDecoration(requireContext()))
+            adapter = memoAdapter.apply {
+                moveOnClickedListener = {
+                    parentFragmentManager.beginTransaction()
+                        .setCustomAnimations(R.anim.slide_enter_from_right, R.anim.slide_exit_to_left, R.anim.slide_enter_from_left,R.anim.slide_exit_to_right)
+                        .add(R.id.frame_layout_memo_list, MemoFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
+                }
             }
         }
     }

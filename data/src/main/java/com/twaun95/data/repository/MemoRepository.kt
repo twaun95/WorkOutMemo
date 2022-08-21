@@ -1,5 +1,6 @@
 package com.twaun95.data.repository
 
-interface BodyPartRepository {
+interface MemoRepository {
     suspend fun getBodyPart()
+    suspend fun getMemo()
 }
