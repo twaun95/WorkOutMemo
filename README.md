@@ -28,10 +28,11 @@
   
 
 ### 📝 기술
-- 클린아키텍쳐, MVVM
-- coroutine
-- koin
-- room
+- Architecture: Clean-Architecture, MVVM
+- 비동기 : Coroutine
+- DI : Koin
+- DB : Room
+- LiveData - DataBinding
 
 
 
