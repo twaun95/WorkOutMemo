@@ -25,7 +25,8 @@
                 android:id="@+id/layout_title"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@id/layout_thumbnail"
+                app:layout_constraintVertical_weight="3"
+                app:layout_constraintBottom_toTopOf="@id/layout_date"
                 app:layout_constraintLeft_toLeftOf="@id/gl_left"
                 app:layout_constraintRight_toLeftOf="@id/gl_right"
                 app:layout_constraintTop_toBottomOf="@id/gl_top">
@@ -38,8 +39,35 @@
                     android:fontFamily="@font/bold"
                     android:singleLine="true"
                     android:text="제목"
-                    app:layout_constraintHeight_percent="0.8"
                     android:textColor="@color/mono8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_date"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintVertical_weight="2"
+                app:layout_constraintBottom_toTopOf="@id/layout_thumbnail"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="@id/gl_left"
+                app:layout_constraintRight_toLeftOf="@id/gl_right"
+                app:layout_constraintTop_toBottomOf="@id/layout_title">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/medium"
+                    android:singleLine="true"
+                    android:text="2022.09.05"
+                    android:textColor="@color/mono7"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -52,10 +80,11 @@
                 android:id="@+id/layout_thumbnail"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                app:layout_constraintVertical_weight="2"
                 app:layout_constraintBottom_toTopOf="@id/gl_bottom"
                 app:layout_constraintLeft_toRightOf="@id/gl_left"
                 app:layout_constraintRight_toLeftOf="@id/gl_right"
-                app:layout_constraintTop_toBottomOf="@id/layout_title">
+                app:layout_constraintTop_toBottomOf="@id/layout_date">
 
                 <TextView
                     android:id="@+id/tv_thumbnail"
@@ -69,7 +98,6 @@
                     android:textColor="@color/mono7"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.6"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

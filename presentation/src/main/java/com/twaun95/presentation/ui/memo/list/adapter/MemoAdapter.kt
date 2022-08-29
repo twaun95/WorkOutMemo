@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.twaun95.data.BodyPart
 import com.twaun95.presentation.databinding.ItemMemoBinding
 import com.twaun95.presentation.extensions.setOnSingleClickListener
+import com.twaun95.presentation.extensions.toDateFormat
 import com.twaun95.presentation.ui.body_part.diff_basic.BodyPartDiffUtilCallback
 
 class MemoAdapter(
@@ -43,7 +44,7 @@ class MemoAdapter(
 
 
 
-    inner  class MemoViewHolder(
+    inner class MemoViewHolder(
         private val binding: ItemMemoBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(
@@ -51,6 +52,7 @@ class MemoAdapter(
             onClickListener: (()->Unit)? = null
         ) {
             binding.tvTitle.text = data.title
+            binding.tvDate.text = System.currentTimeMillis().toDateFormat()
             binding.layoutItemMemo.setOnSingleClickListener {
                 onClickListener?.invoke()
             }

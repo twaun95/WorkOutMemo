@@ -11,7 +11,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainActivityViewModel>(R.
 
     override fun initView() {
         super.initView()
-        supportFragmentManager.beginTransaction().replace(R.id.frame_layout_main, BodyPartFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.frame_layout_main, BodyPartFragment.newInstance()).commit()
     }
 
     override fun setEvent() {
