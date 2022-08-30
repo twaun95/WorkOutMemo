@@ -13,7 +13,7 @@ import com.twaun95.presentation.R
 class BodyPartItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
     private val paint = Paint().apply {
-        color = ContextCompat.getColor(context, R.color.mono4)
+        color = ContextCompat.getColor(context, R.color.mono2)
     }
 
     companion object {
