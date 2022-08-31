@@ -15,7 +15,7 @@
   - base class(activity, fragment, viewModel, dialog, toast)
 - MVVM + 클린 아키텍쳐 구조
   - ViewModel, Repository 사용
-  - module 단위 구성(app, core, data, domain, presentation)
+  - module 단위 구성(app, core, data, presentation)
     - app           : DI(Koin)
     - core          : Base Class
     - data          : 내부, 외부 데이터 저장소
@@ -24,7 +24,6 @@
 - 구글 스토어 배포 
 - 새 기술 시도
   - recyclerview diffutil class
-  - binding adapter
   - room
   - fragment navigation
   - editText
@@ -51,7 +50,7 @@
 - room 클린+MVVM 구조 적용
 
 
-#### 🗓 추가 기능 리스트
+#### 🗒 추가 기능 리스트
 
 - 달력
 - 타이머
