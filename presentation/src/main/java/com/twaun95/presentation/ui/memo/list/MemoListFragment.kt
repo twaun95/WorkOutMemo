@@ -50,7 +50,7 @@ class MemoListFragment : BaseFragment<FragmentMemoListBinding, MemoListFragmentV
         }
         binding.btnCreate.setOnSingleClickListener {
             parentFragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.slide_enter_from_right, R.anim.slide_exit_to_left, R.anim.slide_enter_from_left,R.anim.slide_exit_to_right)
+                .setCustomAnimations(R.anim.slide_enter_from_bottom, R.anim.slide_exit_to_top, R.anim.slide_enter_from_top,R.anim.slide_exit_to_bottom)
                 .add(R.id.frame_layout_memo_list, MemoCreateFragment.newInstance())
                 .addToBackStack(null)
                 .commit()
