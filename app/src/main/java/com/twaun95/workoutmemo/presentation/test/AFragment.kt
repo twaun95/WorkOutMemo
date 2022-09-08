@@ -2,8 +2,8 @@ package com.twaun95.workoutmemo.presentation.test
 
 import android.os.SystemClock
 import com.twaun95.core.BaseFragment
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.FragmentTestABinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.FragmentTestABinding
 import com.twaun95.workoutmemo.presentation.utils.MyLogger
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

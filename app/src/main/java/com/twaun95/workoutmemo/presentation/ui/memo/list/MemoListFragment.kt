@@ -1,10 +1,10 @@
 package com.twaun95.workoutmemo.presentation.ui.memo.list
 
 import com.twaun95.core.BaseFragment
+import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.data.TestRepository
-import com.twaun95.presentation.R
+import com.twaun95.workoutmemo.databinding.FragmentMemoListBinding
 import com.twaun95.workoutmemo.presentation.adapter.BodyPartItemDecoration
-import com.twaun95.presentation.databinding.FragmentMemoListBinding
 import com.twaun95.workoutmemo.presentation.extensions.setOnSingleClickListener
 import com.twaun95.workoutmemo.presentation.ui.memo.create.MemoCreateFragment
 import com.twaun95.workoutmemo.presentation.ui.memo.list.adapter.MemoAdapter

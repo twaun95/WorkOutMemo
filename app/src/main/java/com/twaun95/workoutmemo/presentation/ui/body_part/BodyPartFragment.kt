@@ -1,10 +1,10 @@
 package com.twaun95.workoutmemo.presentation.ui.body_part
 
 import com.twaun95.core.BaseFragment
+import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.data.TestRepository
-import com.twaun95.presentation.R
+import com.twaun95.workoutmemo.databinding.FragmentBodyPartBinding
 import com.twaun95.workoutmemo.presentation.adapter.BodyPartItemDecoration
-import com.twaun95.presentation.databinding.FragmentBodyPartBinding
 import com.twaun95.workoutmemo.presentation.dialog.base.BaseDialog
 import com.twaun95.workoutmemo.presentation.dialog.CommonDialog
 import com.twaun95.workoutmemo.presentation.dialog.CreateBodyPartDialog

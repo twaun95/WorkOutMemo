@@ -1,8 +1,8 @@
 package com.twaun95.workoutmemo.presentation.ui.main
 
 import com.twaun95.core.BaseActivity
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.ActivityMainBinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.ActivityMainBinding
 import com.twaun95.workoutmemo.presentation.ui.body_part.BodyPartFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

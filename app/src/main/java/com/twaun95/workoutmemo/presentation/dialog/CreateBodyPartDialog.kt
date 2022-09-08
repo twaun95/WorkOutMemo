@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.FragmentDialogCreateBodyPartBinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.FragmentDialogCreateBodyPartBinding
 import com.twaun95.workoutmemo.presentation.extensions.setOnSingleClickListener
 
 class CreateBodyPartDialog(private var dialogClickListener : ((clicked: DialogClicked, text: String)->Unit)? = null) : DialogFragment(){

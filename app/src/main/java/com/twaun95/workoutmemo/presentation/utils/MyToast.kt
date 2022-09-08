@@ -5,8 +5,8 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.ViewToastBinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.ViewToastBinding
 import com.twaun95.workoutmemo.presentation.extensions.toPx
 
 object MyToast {

@@ -1,7 +1,7 @@
 package com.twaun95.workoutmemo.presentation.dialog
 
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.FragmentDialogCommonBinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.FragmentDialogCommonBinding
 import com.twaun95.workoutmemo.presentation.dialog.base.BaseDialog
 import com.twaun95.workoutmemo.presentation.dialog.base.DialogBody
 import com.twaun95.workoutmemo.presentation.extensions.setOnSingleClickListener

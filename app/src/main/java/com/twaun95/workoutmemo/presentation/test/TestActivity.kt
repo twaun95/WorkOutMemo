@@ -1,8 +1,8 @@
 package com.twaun95.workoutmemo.presentation.test
 
 import com.twaun95.core.BaseActivity
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.ActivityTestBinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.ActivityTestBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TestActivity : BaseActivity<ActivityTestBinding, TestActivityViewModel>(R.layout.activity_test) {

@@ -7,7 +7,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.twaun95.presentation.R
+import com.twaun95.workoutmemo.R
 
 class BodyPartItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
 

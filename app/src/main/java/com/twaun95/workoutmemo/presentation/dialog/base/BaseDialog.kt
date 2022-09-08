@@ -8,7 +8,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.DialogFragment
-import com.twaun95.presentation.R
+import com.twaun95.workoutmemo.R
 
 abstract class BaseDialog<VB: ViewDataBinding>(@LayoutRes private val layoutId: Int) : DialogFragment() {
 

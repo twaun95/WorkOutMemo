@@ -1,8 +1,8 @@
 package com.twaun95.workoutmemo.presentation.ui.memo.read
 
 import com.twaun95.core.BaseFragment
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.FragmentMemoBinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.FragmentMemoBinding
 import com.twaun95.workoutmemo.presentation.extensions.setOnSingleClickListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

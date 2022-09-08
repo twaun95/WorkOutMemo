@@ -47,4 +47,5 @@ dependencies {
     androidTestImplementation(androidTestDeps)
 
     debugImplementation dependenciesSet.leakcanary
+    implementation dependenciesSet.lottie
 }

@@ -3,8 +3,8 @@ package com.twaun95.workoutmemo.presentation.ui.splash
 import android.animation.Animator
 import android.content.Intent
 import com.twaun95.core.BaseActivity
-import com.twaun95.presentation.R
-import com.twaun95.presentation.databinding.ActivityLaunchBinding
+import com.twaun95.workoutmemo.R
+import com.twaun95.workoutmemo.databinding.ActivityLaunchBinding
 import com.twaun95.workoutmemo.presentation.ui.main.MainActivity
 import com.twaun95.workoutmemo.presentation.utils.MyLogger
 import org.koin.androidx.viewmodel.ext.android.viewModel

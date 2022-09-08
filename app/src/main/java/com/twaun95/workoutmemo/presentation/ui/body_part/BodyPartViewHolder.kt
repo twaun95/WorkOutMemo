@@ -2,7 +2,7 @@ package com.twaun95.workoutmemo.presentation.ui.body_part
 
 import androidx.recyclerview.widget.RecyclerView
 import com.twaun95.workoutmemo.data.BodyPart
-import com.twaun95.presentation.databinding.ItemBodyPartBinding
+import com.twaun95.workoutmemo.databinding.ItemBodyPartBinding
 import com.twaun95.workoutmemo.presentation.extensions.setOnSingleClickListener
 
 class BodyPartViewHolder(

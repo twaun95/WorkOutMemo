@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.twaun95.workoutmemo.data.BodyPart
-import com.twaun95.presentation.databinding.ItemMemoBinding
+import com.twaun95.workoutmemo.databinding.ItemMemoBinding
 import com.twaun95.workoutmemo.presentation.extensions.setOnSingleClickListener
 import com.twaun95.workoutmemo.presentation.extensions.toDateFormat
 import com.twaun95.workoutmemo.presentation.ui.body_part.diff_basic.BodyPartDiffUtilCallback

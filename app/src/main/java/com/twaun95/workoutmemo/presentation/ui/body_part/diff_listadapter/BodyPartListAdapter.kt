@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.twaun95.workoutmemo.data.BodyPart
-import com.twaun95.presentation.databinding.ItemBodyPartBinding
+import com.twaun95.workoutmemo.databinding.ItemBodyPartBinding
 import com.twaun95.workoutmemo.presentation.ui.body_part.BodyPartViewHolder
 
 class BodyPartListAdapter : ListAdapter<BodyPart, BodyPartViewHolder>(diffUtil) {

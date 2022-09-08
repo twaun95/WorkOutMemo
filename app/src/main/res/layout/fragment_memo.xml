@@ -4,13 +4,13 @@
 
     <data>
 
-        <import type="com.twaun95.presentation.ui.memo.read.EditMode" />
+        <import type="com.twaun95.workoutmemo.presentation.ui.memo.read.EditMode"/>
 
         <import type="android.view.View" />
 
         <variable
             name="viewModel"
-            type="com.twaun95.presentation.ui.memo.read.MemoFragmentViewModel" />
+            type="com.twaun95.workoutmemo.presentation.ui.memo.read.MemoFragmentViewModel" />
     </data>
 
     <FrameLayout
