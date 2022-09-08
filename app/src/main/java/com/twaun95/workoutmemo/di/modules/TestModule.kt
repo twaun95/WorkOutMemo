@@ -1,4 +1,4 @@
-package com.twaun95.workoutmemo.modules
+package com.twaun95.workoutmemo.di.modules
 
 import com.twaun95.presentation.test.AFragmentViewModel
 import com.twaun95.presentation.test.BFragmentViewModel

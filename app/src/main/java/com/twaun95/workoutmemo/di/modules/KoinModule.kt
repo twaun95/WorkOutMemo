@@ -1,4 +1,4 @@
-package com.twaun95.workoutmemo.modules
+package com.twaun95.workoutmemo.di.modules
 
 import org.koin.core.module.Module
 
