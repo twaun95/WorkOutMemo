@@ -1,6 +1,6 @@
 package com.twaun95.workoutmemo.presentation.test
 
-import com.twaun95.core.BaseViewModel
+import com.twaun95.core.base.BaseViewModel
 
 class AFragmentViewModel : BaseViewModel() {
 }

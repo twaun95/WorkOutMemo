@@ -1,5 +1,6 @@
 package com.twaun95.workoutmemo.di.modules
 
+import com.twaun95.workoutmemo.di.KoinModule
 import com.twaun95.workoutmemo.presentation.ui.main.MainActivityViewModel
 import com.twaun95.workoutmemo.presentation.ui.body_part.BodyPartFragmentViewModel
 import com.twaun95.workoutmemo.presentation.ui.memo.create.MemoCreateFragmentViewModel
@@ -10,7 +11,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
-object ViewModelModule : KoinModule{
+object ViewModelModule : KoinModule {
     override val module: Module
         get() = module {
             viewModel { LaunchActivityViewModel(get()) }

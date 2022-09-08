@@ -2,7 +2,7 @@ package com.twaun95.workoutmemo.presentation.ui.body_part
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.twaun95.core.BaseViewModel
+import com.twaun95.core.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

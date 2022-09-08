@@ -1,5 +1,6 @@
 package com.twaun95.workoutmemo.di.modules
 
+import com.twaun95.workoutmemo.di.KoinModule
 import com.twaun95.workoutmemo.presentation.test.AFragmentViewModel
 import com.twaun95.workoutmemo.presentation.test.BFragmentViewModel
 import com.twaun95.workoutmemo.presentation.test.TestActivityViewModel

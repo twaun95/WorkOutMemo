@@ -1,6 +1,6 @@
 package com.twaun95.workoutmemo.presentation.ui.memo.read
 
-import com.twaun95.core.BaseFragment
+import com.twaun95.core.base.BaseFragment
 import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.databinding.FragmentMemoBinding
 import com.twaun95.workoutmemo.presentation.extensions.setOnSingleClickListener

@@ -1,4 +1,4 @@
-package com.twaun95.workoutmemo.logger
+package com.twaun95.core.logger
 
 import android.app.Activity
 import android.app.Application
@@ -16,27 +16,27 @@ class ActivityLifeCycleLogger(
     }
 
     override fun onActivityStarted(p0: Activity) {
-        LifeCycleLogger.debug(p0 , "Started")
+        LifeCycleLogger.debug(p0, "Started")
     }
 
     override fun onActivityResumed(p0: Activity) {
-        LifeCycleLogger.debug(p0 , "Resumed")
+        LifeCycleLogger.debug(p0, "Resumed")
     }
 
     override fun onActivityPaused(p0: Activity) {
-        LifeCycleLogger.debug(p0 , "Paused")
+        LifeCycleLogger.debug(p0, "Paused")
     }
 
     override fun onActivityStopped(p0: Activity) {
-        LifeCycleLogger.debug(p0 , "Stopped")
+        LifeCycleLogger.debug(p0, "Stopped")
     }
 
     override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) {
-        LifeCycleLogger.debug(p0 , "SaveInstanceState")
+        LifeCycleLogger.debug(p0, "SaveInstanceState")
     }
 
     override fun onActivityDestroyed(p0: Activity) {
-        LifeCycleLogger.debug(p0 , "Destroyed")
+        LifeCycleLogger.debug(p0, "Destroyed")
         if(p0 is AppCompatActivity) {
             p0.supportFragmentManager.unregisterFragmentLifecycleCallbacks(fragmentLogger)
         }

@@ -1,6 +1,6 @@
 package com.twaun95.workoutmemo.presentation.test
 
-import com.twaun95.core.BaseActivity
+import com.twaun95.core.base.BaseActivity
 import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.databinding.ActivityTestBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel

@@ -4,6 +4,7 @@ import com.twaun95.workoutmemo.data.TestRepository
 import com.twaun95.workoutmemo.data.local.AppSharedPreference
 import com.twaun95.workoutmemo.data.repository.MemoRepository
 import com.twaun95.workoutmemo.data.repository.MemoRepositoryImpl
+import com.twaun95.workoutmemo.di.KoinModule
 import org.koin.android.ext.koin.androidApplication
 import org.koin.core.module.Module
 import org.koin.dsl.module

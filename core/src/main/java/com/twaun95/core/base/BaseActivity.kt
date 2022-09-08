@@ -1,11 +1,10 @@
-package com.twaun95.core
+package com.twaun95.core.base
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import org.koin.android.ext.android.inject
 
 abstract class BaseActivity<VB: ViewDataBinding, VM: BaseViewModel>(@LayoutRes private val layoutId: Int) : AppCompatActivity() {
 

@@ -1,7 +1,7 @@
 package com.twaun95.workoutmemo
 
 import android.app.Application
-import com.twaun95.workoutmemo.logger.ActivityLifeCycleLogger
+import com.twaun95.core.logger.ActivityLifeCycleLogger
 import com.twaun95.workoutmemo.di.modules.LogModule
 import com.twaun95.workoutmemo.di.modules.DataModule
 import com.twaun95.workoutmemo.di.modules.TestModule

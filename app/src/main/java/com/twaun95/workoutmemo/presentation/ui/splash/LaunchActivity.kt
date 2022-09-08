@@ -2,7 +2,7 @@ package com.twaun95.workoutmemo.presentation.ui.splash
 
 import android.animation.Animator
 import android.content.Intent
-import com.twaun95.core.BaseActivity
+import com.twaun95.core.base.BaseActivity
 import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.databinding.ActivityLaunchBinding
 import com.twaun95.workoutmemo.presentation.ui.main.MainActivity

@@ -1,7 +1,7 @@
 package com.twaun95.workoutmemo.presentation.test
 
 import android.os.SystemClock
-import com.twaun95.core.BaseFragment
+import com.twaun95.core.base.BaseFragment
 import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.databinding.FragmentTestABinding
 import com.twaun95.workoutmemo.presentation.utils.MyLogger

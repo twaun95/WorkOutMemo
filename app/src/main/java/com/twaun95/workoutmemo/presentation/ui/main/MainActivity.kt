@@ -1,6 +1,6 @@
 package com.twaun95.workoutmemo.presentation.ui.main
 
-import com.twaun95.core.BaseActivity
+import com.twaun95.core.base.BaseActivity
 import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.databinding.ActivityMainBinding
 import com.twaun95.workoutmemo.presentation.ui.body_part.BodyPartFragment

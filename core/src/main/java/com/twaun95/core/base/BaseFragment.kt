@@ -1,4 +1,4 @@
-package com.twaun95.core
+package com.twaun95.core.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

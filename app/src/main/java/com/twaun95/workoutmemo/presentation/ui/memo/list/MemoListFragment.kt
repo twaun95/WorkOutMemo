@@ -1,6 +1,6 @@
 package com.twaun95.workoutmemo.presentation.ui.memo.list
 
-import com.twaun95.core.BaseFragment
+import com.twaun95.core.base.BaseFragment
 import com.twaun95.workoutmemo.R
 import com.twaun95.workoutmemo.data.TestRepository
 import com.twaun95.workoutmemo.databinding.FragmentMemoListBinding

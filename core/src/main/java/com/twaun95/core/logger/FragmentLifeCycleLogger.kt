@@ -1,4 +1,4 @@
-package com.twaun95.workoutmemo.logger
+package com.twaun95.core.logger
 
 import android.content.Context
 import android.os.Bundle
