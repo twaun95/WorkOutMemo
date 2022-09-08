@@ -37,8 +37,6 @@ android {
 
 dependencies {
     implementation project(path: ':core')
-    implementation project(path: ':data')
-    implementation project(path: ':presentation')
 
     implementation dependenciesSet.room.room
     annotationProcessor dependenciesSet.room.annotation

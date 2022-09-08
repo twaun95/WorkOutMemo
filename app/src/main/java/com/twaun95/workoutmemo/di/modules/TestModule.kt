@@ -1,8 +1,8 @@
 package com.twaun95.workoutmemo.di.modules
 
-import com.twaun95.presentation.test.AFragmentViewModel
-import com.twaun95.presentation.test.BFragmentViewModel
-import com.twaun95.presentation.test.TestActivityViewModel
+import com.twaun95.workoutmemo.presentation.test.AFragmentViewModel
+import com.twaun95.workoutmemo.presentation.test.BFragmentViewModel
+import com.twaun95.workoutmemo.presentation.test.TestActivityViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module

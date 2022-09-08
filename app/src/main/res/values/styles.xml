@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <style name="my_dialog" parent="Theme.AppCompat.Dialog">-->
+
+<!--        <item name="android:windowIsFloating">false</item>-->
+<!--        <item name="android:windowFullscreen">false</item>-->
+<!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+<!--        <item name="android:backgroundDimEnabled">true</item>-->
+<!--        <item name="android:backgroundDimAmount">1</item>-->
+
+<!--    </style>-->
+
+
+<!--    <style name="MyEditText" parent="Widget.AppCompat.EditText">-->
+<!--        <item name="android:inputType">textNoSuggestions|textVisiblePassword</item>-->
+<!--        <item name="android:background">@android:color/transparent</item>-->
+<!--        <item name="android:textCursorDrawable">@drawable/cursor_blue</item>-->
+<!--    </style>-->
+</resources>
